@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/data/database" />
+      <excludeFolder url="file://$MODULE_DIR$/data/images" />
+      <excludeFolder url="file://$MODULE_DIR$/data/video_source" />
+      <excludeFolder url="file://$MODULE_DIR$/data/video_source/Files_downloaded_by_AirDroid" />
+      <excludeFolder url="file://$MODULE_DIR$/output" />
+      <excludeFolder url="file://$MODULE_DIR$/tfyolov4/android" />
+      <excludeFolder url="file://$MODULE_DIR$/tfyolov4/data/images" />
+      <excludeFolder url="file://$MODULE_DIR$/tfyolov4/data/video" />
+      <excludeFolder url="file://$MODULE_DIR$/tfyolov4/detections" />
+      <excludeFolder url="file://$MODULE_DIR$/yolov4-deepsort/data/video" />
+      <excludeFolder url="file://$MODULE_DIR$/yolov4-deepsort/outputs" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="TestRunnerService">
+    <option name="PROJECT_TEST_RUNNER" value="Unittests" />
+  </component>
+</module>
