@@ -1,0 +1,38 @@
+Automated car tracker and plates reader. 
+Detects and tracks car movement between predefined zones on videoframe.
+Looks for plates, tries to perform character recognition (OCR).
+For each tracked car, selects best plates OCR.
+Saves all info (frame, time, location, OCR result etc) to .csv file
+
+Upcoming features:
+Saving images or short videos when car crosses zones
+
+The project is organized this way:
+
+myplatescounterwithtracker_v0_2.py - main project file. Contains project business logic. / currently also includes objects tracking and result image output that should be moved to separate modules.
+config.py - configuration file.
+  Set videosource, filename for .csv outut file in this file.
+  Allows set DEBUG mode for printiong extensive log, set pause time for video output 
+
+Project components saved as separate files (modules):
+
+databasekeeper.py - responsible for opertions with database (recieve data, save to specific format etc.) for storing results
+locationgetter.py - responsible for setting zones and finding out location of car (or any other tracked object)
+platesrecognizer.py - responsible for performing optical character recognition 
+video_reader.py - responsible for recieving video (files or camera) and getting frames from it
+objectsdetector.py - responsible for detecting objects in images
+objectstracker.py - responsible for matching detected objects on current frame with ojects on previous frames / currently nut in use
+timegetter.py - responsible for getting time from frame / currently not implemented  
+trackableobjectsmanager.py - responsible for recieving and holding info on currently tracked objects, making decision if plates image should be passed for OCR, preparing info for database etc.
+mytests.py - created holding tests
+
+Folders:
+/data - for video source files and database files
+/deep_sort - tracking module using DEEPSort framework
+/tfyolov3 - YOLO v4 implemented on TensorFlow. Used for car and plates detection
+/tools - art of DEEPSort module
+/ unproject_text-master - module for unwarping plates image from skewed to birds-eye view. /currently not in use
+
+Not mentioned above files should be treated as under development.
+
+
