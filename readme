@@ -10,10 +10,14 @@ Saving images or short videos when car crosses zones
 The project is organized this way:
 
 myplatescounterwithtracker_v0_2.py - main project file. Contains project business logic. / currently also includes objects tracking and result image output that should be moved to separate modules.
-config.py - configuration file.
-  Set videosource, filename for .csv outut file in this file.
-  Allows set DEBUG mode for printiong extensive log, set pause time for video output 
-
+config.py - configuration file. Use it to set:
+  - videosource filename
+  - .csv output file.
+  - DEBUG mode for printing extensive log
+  - pause time for video output 
+  - other miscellaneous settings 
+  
+  
 Project components saved as separate files (modules):
 
 databasekeeper.py - responsible for opertions with database (recieve data, save to specific format etc.) for storing results
@@ -31,7 +35,7 @@ Folders:
 /deep_sort - tracking module using DEEPSort framework
 /tfyolov3 - YOLO v4 implemented on TensorFlow. Used for car and plates detection
 /tools - art of DEEPSort module
-/ unproject_text-master - module for unwarping plates image from skewed to birds-eye view. /currently not in use
+/unproject_text-master - module for unwarping plates image from skewed to birds-eye view. /currently not in use
 
 Not mentioned above files should be treated as under development.
 
